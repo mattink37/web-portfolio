@@ -1,0 +1,7 @@
+.SidebarContainer {
+  width: '3.75vw';
+  background-color: #202225;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
