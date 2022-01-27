@@ -1,9 +1,24 @@
 .ServerBubble {
   border-radius: 50%;
-  height: 24px;
-  width: 24px;
+  height: 48px;
+  width: 48px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 8px;
+  opacity: 0.6;
+  transition: all 0.5s;
+  animation-name: hoverAnim;
+}
+
+.ServerBubble:hover {
+  opacity: 1;
+  animation: hoverAnim left-to-right 0.5s ease-in forwards;
+}
+
+@keyframes hoverAnim {
+  100% {
+    border-radius: 90%;
+  }
 }

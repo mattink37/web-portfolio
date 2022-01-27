@@ -6,13 +6,13 @@ const ServerSidebar = () => {
   return (
     <Grid container direction="column" className='SidebarContainer'>
       <Grid item>
-        <ServerBubble imgSrc="" />
+        <ServerBubble imgSrc="./profile-pic" onClick={() => console.log('clicked!')} />
       </Grid>
       <Grid item>
-        <Button>B</Button>
+        <ServerBubble imgSrc="./profile-pic" />
       </Grid>
       <Grid item>
-        <Button>C</Button>
+        <ServerBubble imgSrc="./profile-pic" />
       </Grid>
     </Grid>
   );
