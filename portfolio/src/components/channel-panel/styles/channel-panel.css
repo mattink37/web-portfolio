@@ -1,6 +1,8 @@
 .ChannelPanelContainer {
   background-color: #2f3136;
   min-height: 100vh;
+  min-width: 12.5vw;
+  max-width: 12.5vw;
   display: flex;
   flex-direction: column;
 }

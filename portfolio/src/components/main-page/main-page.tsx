@@ -4,7 +4,7 @@ import TopBar from "../page-header/topbar";
 import ServerSidebar from "../server-sidebar/server-side-bar";
 import './styles/main-page.css';
 
-const MainPage: React.FC<MainPageProps> = ({}) => {
+const MainPage = () => {
   return (
     <Grid container className='MainPageContainer'>
       <Grid item>
@@ -18,10 +18,6 @@ const MainPage: React.FC<MainPageProps> = ({}) => {
       </Grid>  
     </Grid>
   );
-};
-
-interface MainPageProps {
-
 };
 
 export default MainPage;

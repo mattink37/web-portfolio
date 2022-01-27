@@ -1,0 +1,9 @@
+.ServerBubble {
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

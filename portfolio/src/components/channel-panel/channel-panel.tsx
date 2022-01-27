@@ -1,7 +1,7 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import './styles/channel-panel.css';
 
-const ChannelPanel: React.FC<ChannelPanelProps> = ({}) => {
+const ChannelPanel = () => {
   return (
     <Grid container direction="column" className='ChannelPanelContainer'>
       <Grid item>
@@ -15,10 +15,6 @@ const ChannelPanel: React.FC<ChannelPanelProps> = ({}) => {
       </Grid>
     </Grid>
   );
-};
-
-interface ChannelPanelProps {
-
 };
 
 export default ChannelPanel;

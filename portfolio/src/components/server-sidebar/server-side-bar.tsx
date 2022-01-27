@@ -1,11 +1,12 @@
 import { Button, Grid } from "@mui/material";
+import ServerBubble from "../server-bubble/server-bubble";
 import './styles/server-sidebar.css';
 
-const ServerSidebar: React.FC<ServerSidebarProps> = ({}) => {
+const ServerSidebar = () => {
   return (
     <Grid container direction="column" className='SidebarContainer'>
       <Grid item>
-        <Button>A</Button>
+        <ServerBubble imgSrc="" />
       </Grid>
       <Grid item>
         <Button>B</Button>
@@ -15,10 +16,6 @@ const ServerSidebar: React.FC<ServerSidebarProps> = ({}) => {
       </Grid>
     </Grid>
   );
-};
-
-interface ServerSidebarProps {
-
 };
 
 export default ServerSidebar;

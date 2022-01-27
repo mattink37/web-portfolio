@@ -1,4 +1,4 @@
-import { Button, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 
 const TopBar: React.FC<{}> = () => {
   return (
