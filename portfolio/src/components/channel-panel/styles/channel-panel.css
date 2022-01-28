@@ -5,3 +5,20 @@
   display: flex;
   flex-direction: column;
 }
+
+.ChannelsContainer {
+  width: 100%;
+}
+
+.UserPanelContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+.UserPanel {
+  width: 100%;
+  height: 52px;
+  background-color: #292b2f;
+}
