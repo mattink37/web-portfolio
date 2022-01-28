@@ -8,7 +8,8 @@ const Divider: React.FC<DividerProps> = ({ width, height, color, hsla }) => {
         width: width,
         height: height,
         backgroundColor: _hsla ?? color,
-        border: "none",
+        border: 'none',
+        margin: 'auto',
       }}
     />
   );

@@ -14,18 +14,20 @@ const ServerSidebar = () => {
   return (
     <Grid container direction="column" className='SidebarContainer'>
       <Grid item className='TopPadding'>
-        <Grid item>
+        <Grid item className='HomeBubble'>
           <ServerBubble imgSrc="./profile-pic" onClick={() => console.log('clicked!')} />
         </Grid>
         <Divider width={32} height={2} hsla={hsla} />
-        <Grid item>
-          <ServerBubble imgSrc="./profile-pic" onClick={() => console.log('clicked!')} />
-        </Grid>
-        <Grid item>
-          <ServerBubble imgSrc="./profile-pic" />
-        </Grid>
-        <Grid item>
-          <ServerBubble imgSrc="./profile-pic" />
+        <Grid item className='ServerContainer'>
+          <Grid item className="ServerBubblePadding">
+            <ServerBubble imgSrc="./profile-pic" onClick={() => console.log('clicked!')} />
+          </Grid>
+          <Grid item className="ServerBubblePadding">
+            <ServerBubble imgSrc="./profile-pic" />
+          </Grid>
+          <Grid item className="ServerBubblePadding">
+            <ServerBubble imgSrc="./profile-pic" />
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
