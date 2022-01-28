@@ -6,7 +6,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 8px;
   opacity: 0.6;
   transition: all 0.5s;
   animation-name: hoverAnim;
