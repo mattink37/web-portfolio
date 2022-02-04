@@ -32,8 +32,17 @@
 
 .ServerHeader {
   color: white;
-  vertical-align: middle;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .ServerheaderLabel {
+  
+}
+
+.Chevron {
 }
