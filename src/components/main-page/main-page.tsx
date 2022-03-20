@@ -13,7 +13,7 @@ const MainPage = () => {
       <Grid item>
         <ChannelPanel />
       </Grid>
-      <Grid item>
+      <Grid item sx={{ flex: '1' }}>
         <TopBar />
       </Grid>  
     </Grid>
