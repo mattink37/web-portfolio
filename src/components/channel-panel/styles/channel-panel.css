@@ -40,13 +40,6 @@
   font-size: 15px;
 }
 
-.ServerheaderLabel {
-  
-}
-
-.Chevron {
-}
-
 .ChannelIcon {
   margin-right: 6px;
   color: rgb(142, 146, 151);
@@ -73,4 +66,23 @@
 
 .ProfilePic:hover {
   opacity:0.5;
+}
+
+.ChannelPanelDropdown {
+  width: 220px;
+  height: auto;
+  background-color: #18191c;
+  padding-bottom: 10px;
+}
+
+.InfoPopupItem {
+  padding: 5px 10px 0px 10px;
+}
+
+.InfoPopupTitle {
+  align-items: center;
+}
+
+.InfoPopupSubText {
+  padding: 5px 10px 0px 15px;
 }
