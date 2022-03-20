@@ -1,3 +1,33 @@
 .MainPageContainer {
   background-color: #36393f;
 }
+
+.MessageContainer {
+  margin: 15px 0 0 15px;
+}
+
+.MessageDate {
+  padding-left: 8px;
+  align-self: flex-start;
+}
+
+.ProfilePicMain {
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+  transition: all 0.25s;
+  width: 40px;
+  height: 40px;
+}
+
+.Avatar {
+  padding-right: 10px;
+} 
+
+.Username {
+  align-self: flex-start;
+  margin: 15px;
+}
