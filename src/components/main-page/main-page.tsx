@@ -33,6 +33,12 @@ const MainPage = () => {
           showAvatar={false}
           message="I grew up playing all sorts of video games and that sparked my interest in computer science."
         />
+        <ChatMessage
+          showUsername={false}
+          showDate={false}
+          showAvatar={false}
+          message="So now, all these later I've pursued my dreams and I've made a career of my passion."
+        />
       </Grid>
     </Grid>
   );

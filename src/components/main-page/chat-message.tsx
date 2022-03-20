@@ -14,7 +14,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
     <Grid container direction='column'>
       <Grid container direction='row' className='MessageContainer'>
         <Grid item className='Avatar'>
-          {showAvatar ? <img src={MattProfile} className="ProfilePicMain" /> : <div style={{ width: '40px', height: '40px' }}></div>}
+          {showAvatar ? <img src={MattProfile} className="ProfilePicMain" /> : <div style={{ width: '40px' }}></div>}
         </Grid>
         <Grid item className='Username'>
           {showUsername && <Grid item>
