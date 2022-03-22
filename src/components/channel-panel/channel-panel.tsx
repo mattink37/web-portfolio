@@ -1,9 +1,9 @@
 import { Box, Divider, Grid, Grow, Paper } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "./styles/channel-panel.css";
-import { ReactComponent as WavyDude } from "../../common/images/wavyDude.svg";
-import { ReactComponent as Projects } from "../../common/images/projects.svg";
-import { ReactComponent as Experience } from "../../common/images/experience.svg";
+import { ReactComponent as WavyDudeImg } from "../../common/images/wavyDude.svg";
+import { ReactComponent as ProjectsImg } from "../../common/images/projects.svg";
+import { ReactComponent as ExperienceImg } from "../../common/images/experience.svg";
 import MattProfile from "../../common/images/mattProfile.jpg";
 import { useState } from "react";
 import {
@@ -11,9 +11,10 @@ import {
   GrayTypography,
   WhiteTypography,
 } from "../../common/TypographyStyles";
+import { AboutMe, Projects, Experience } from "../../common/enumerations/channels";
 
 const ChannelPanel: React.FC<ChannelPanelProps> = ({
-  setHeaderText,
+  setSelectedChannel,
 }): JSX.Element => {
   const [isDropdownEnabled, setDropdownStatus] = useState(false);
   const handleChange = () => {
@@ -53,9 +54,9 @@ const ChannelPanel: React.FC<ChannelPanelProps> = ({
               container
               direction="row"
               className="ChannelItem"
-              onClick={() => setHeaderText("About Me")}
+              onClick={() => setSelectedChannel(AboutMe)}
             >
-              <WavyDude className="ChannelIcon" />
+              <WavyDudeImg className="ChannelIcon" />
               <GrayTypography>About Me</GrayTypography>
             </Grid>
           </Grid>
@@ -64,9 +65,9 @@ const ChannelPanel: React.FC<ChannelPanelProps> = ({
               container
               direction="row"
               className="ChannelItem"
-              onClick={() => setHeaderText("Projects")}
+              onClick={() => setSelectedChannel(Projects)}
             >
-              <Projects className="ChannelIcon" />
+              <ProjectsImg className="ChannelIcon" />
               <GrayTypography>Projects</GrayTypography>
             </Grid>
           </Grid>
@@ -75,9 +76,9 @@ const ChannelPanel: React.FC<ChannelPanelProps> = ({
               container
               direction="row"
               className="ChannelItem"
-              onClick={() => setHeaderText("Experience")}
+              onClick={() => setSelectedChannel(Experience)}
             >
-              <Experience className="ChannelIcon" />
+              <ExperienceImg className="ChannelIcon" />
               <GrayTypography>Experience</GrayTypography>
             </Grid>
           </Grid>
@@ -98,7 +99,7 @@ const ChannelPanel: React.FC<ChannelPanelProps> = ({
 };
 
 interface ChannelPanelProps {
-  setHeaderText: Function;
+  setSelectedChannel: Function;
 }
 
 const icon = (
