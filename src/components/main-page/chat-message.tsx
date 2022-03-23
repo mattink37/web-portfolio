@@ -11,7 +11,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
   showDate,
 }) => {
   return (
-    <Grid container direction='column'>
+    <Grid container direction='column' sx={{ flexFlow: 'nowrap' }}>
       <Grid container direction='row' className='MessageContainer'>
         <Grid item className='Avatar'>
           {showAvatar ? <img src={MattProfile} className="ProfilePicMain" /> : <div style={{ width: '40px' }}></div>}
