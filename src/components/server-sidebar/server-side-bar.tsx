@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid, Tooltip, Zoom } from "@mui/material";
 import { HslaColorObject } from "../../common/colors";
 import ServerBubble from "../server-bubble/server-bubble";
 import Divider from "./divider";
@@ -19,9 +19,11 @@ const ServerSidebar = () => {
         </Grid>
         <Divider width={32} height={2} hsla={hsla} />
         <Grid item className='ServerContainer'>
-          <Grid item className="ServerBubblePadding">
-            <ServerBubble imgSrc="./code.jpg" />
-          </Grid>
+          <Tooltip title='test' arrow placement="right" TransitionComponent={Zoom}>
+            <Grid item className="ServerBubblePadding">
+              <ServerBubble imgSrc="./code.jpg" />
+            </Grid>
+          </Tooltip>
           <Grid item className="ServerBubblePadding">
             <ServerBubble imgSrc="./hockey.jpg" />
           </Grid>
