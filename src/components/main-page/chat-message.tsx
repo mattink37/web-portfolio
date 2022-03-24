@@ -9,6 +9,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
   showAvatar,
   showUsername,
   showDate,
+  customDate,
 }) => {
   return (
     <Grid container direction='column' sx={{ flexFlow: 'nowrap' }}>
@@ -21,7 +22,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
             <WhiteTypography>{username}</WhiteTypography>
           </Grid>}
           {showDate && <Grid item>
-            <DateTypography>Today at {moment().format('h:mm a')}</DateTypography>
+            <DateTypography>{customDate ?? `Today at ${moment().format('h:mm a')}`}</DateTypography>
           </Grid>}
           <WhiteTypography>
             {message}
@@ -36,6 +37,7 @@ interface ChatMessageProps {
   username?: string;
   message?: string;
   showDate?: boolean;
+  customDate?: string;
   showAvatar?: boolean;
   showUsername?: boolean;
 }
