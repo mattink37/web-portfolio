@@ -5,9 +5,10 @@ import TopBar from "../page-header/topbar";
 import ServerSidebar from "../server-sidebar/server-side-bar";
 import "./styles/main-page.css";
 import { RemoveScrollBar } from "react-remove-scroll-bar";
-import AboutMeChannel from "./channels/AboutMe";
 import { AboutMe } from "../../common/enumerations/channels";
-import Channel from './channels/channel';
+import Channel from "./channels/channel";
+import FriendsPanel from "./friends-panel/friends-panel";
+import { getFriends } from "./friends-panel/friends";
 
 const MainPage = () => {
   const [selectedChannel, setSelectedChannel] = useState(AboutMe);
@@ -21,18 +22,22 @@ const MainPage = () => {
         <ChannelPanel setSelectedChannel={setSelectedChannel} />
       </Grid>
       <Grid item sx={{ flex: "1" }}>
-        <Grid container direction='column' sx={{ flex: 'auto', flexDirection: 'column', height: '100%' }}>
+        <Grid
+          container
+          direction="column"
+          sx={{ flex: "auto", flexDirection: "column", height: "100%" }}
+        >
           <Grid container>
-            <Grid item sx={{ width: '100%' }}>
+            <Grid item sx={{ width: "100%" }}>
               <TopBar headerText={selectedChannel} />
             </Grid>
           </Grid>
-          <Grid container direction='row' sx={{ flexGrow: 'inherit' }}>
-            <Grid item sx={{ width: '0px', flex: 'auto' }}>
+          <Grid container direction="row" sx={{ flexGrow: "inherit" }}>
+            <Grid item sx={{ width: "0px", flex: "auto" }}>
               <Channel channelName={selectedChannel} />
             </Grid>
-            <Grid item sx={{ paddingLeft: '40px' }}>
-              <Grid item sx={{ width: '238px', height: '100%', backgroundColor: '#2f3136' }}></Grid> {/* Todo userpanel */}
+            <Grid item sx={{ paddingLeft: "40px" }}>
+              <FriendsPanel friends={getFriends()} />
             </Grid>
           </Grid>
         </Grid>
