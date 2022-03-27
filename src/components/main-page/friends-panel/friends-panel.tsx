@@ -1,6 +1,7 @@
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { GrayTypography } from "../../../common/TypographyStyles";
+import FriendBubble from "./friend-bubble";
 import "./styles/friends-panel.css";
 
 const FriendsPanel: React.FC<FriendsPanelProps> = ({
@@ -15,22 +16,19 @@ const FriendsPanel: React.FC<FriendsPanelProps> = ({
     >
       <Grid container direction="column" className="OuterFriendGrid">
         {roles.map((role) => (
-          <Grid container direction="column" className="**RoleContainer">
+          <Grid container direction="column" className="RoleContainer">
             <Grid item>
-              <GrayTypography>{`${role.toUpperCase()} - 0`}</GrayTypography>
+              <GrayTypography fontWeight='bold' fontSize='small'>{`${role.toUpperCase()} - 0`}</GrayTypography>
             </Grid>
             {friends
               .filter((friend) => friend.role === role)
               .map((friend) => (
-                <Grid container direction="row">
+                <Grid container direction="row" className="FriendRow">
                   <Grid item className="**FriendAvatar">
-                    <img
-                      src={friend.avatar}
-                      style={{ width: "24px", height: "24px" }}
-                    />
+                    <FriendBubble imgSrc={friend.avatar} />
                   </Grid>
                   <Grid item className="FriendUsername">
-                    {friend.username}
+                    <Typography color={friend.color}>{friend.username}</Typography>
                   </Grid>
                 </Grid>
               ))}
@@ -50,6 +48,8 @@ export interface Friend {
   avatar: string;
   status: string;
   role: string;
+  color: string;
+  onClick: string;
 }
 
 export default FriendsPanel;

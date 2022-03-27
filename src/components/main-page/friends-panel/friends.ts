@@ -1,36 +1,63 @@
+import { AboutMe, Education, Experience } from "../../../common/enumerations/channels";
 import { Friend } from "./friends-panel";
 
 export const getFriends = (): Friend[] => {
   return [
     {
-      username: "Matt",
-      avatar: "./discord.jpg",
+      username: "Matt Inkeles",
+      avatar: "./mattProfile.jpg",
       status: "#vibin",
-      role: "gamer",
+      role: "Software Engineer",
+      color: "#FFFFFF",
+      onClick: AboutMe,
     },
     {
-      username: "Ethan",
-      avatar: "./discord.jpg",
+      username: "NCR",
+      avatar: "./ncr.png",
       status: "#vibin",
-      role: "gamer",
+      role: "Experience",
+      color: "#54B948",
+      onClick: Experience,
     },
     {
-      username: "Grant",
-      avatar: "./discord.jpg",
+      username: "Blue Yonder",
+      avatar: "./by.jpg",
       status: "#vibin",
-      role: "gamer",
+      role: "Experience",
+      color: "#4682b4",
+      onClick: Experience,
     },
     {
-      username: "Mograin",
-      avatar: "./discord.jpg",
+      username: "Target",
+      avatar: "./target.png",
       status: "#vibin",
-      role: "BIG gamer",
+      role: "Experience",
+      color: "#CC0000",
+      onClick: Experience,
     },
     {
-      username: "eee",
-      avatar: "./discord.jpg",
+      username: "Kohl's",
+      avatar: "./kohls.png",
       status: "#vibin",
-      role: "gamer",
+      role: "Experience",
+      color: "#7fffcc",
+      onClick: Experience,
+    },
+    {
+      username: "UCF",
+      avatar: "./ucf.png",
+      status: "#vibin",
+      role: "Education",
+      color: "#B7A369",
+      onClick: Education,
+    },
+    {
+      username: "KSU",
+      avatar: "./ksu.jpg",
+      status: "#vibin",
+      role: "Education",
+      color: "#ffc629",
+      onClick: Education,
     },
   ] as Friend[];
 };
