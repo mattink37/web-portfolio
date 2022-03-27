@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Avatar, Badge, Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { GrayTypography } from "../../../common/TypographyStyles";
 import FriendBubble from "./friend-bubble";
@@ -18,7 +18,10 @@ const FriendsPanel: React.FC<FriendsPanelProps> = ({
         {roles.map((role) => (
           <Grid container direction="column" className="RoleContainer">
             <Grid item>
-              <GrayTypography fontWeight='bold' fontSize='small'>{`${role.toUpperCase()} - 0`}</GrayTypography>
+              <GrayTypography
+                fontWeight="bold"
+                fontSize="small"
+              >{`${role.toUpperCase()} - 0`}</GrayTypography>
             </Grid>
             {friends
               .filter((friend) => friend.role === role)
@@ -28,7 +31,9 @@ const FriendsPanel: React.FC<FriendsPanelProps> = ({
                     <FriendBubble imgSrc={friend.avatar} />
                   </Grid>
                   <Grid item className="FriendUsername">
-                    <Typography color={friend.color}>{friend.username}</Typography>
+                    <Typography color={friend.color}>
+                      {friend.username}
+                    </Typography>
                   </Grid>
                 </Grid>
               ))}
