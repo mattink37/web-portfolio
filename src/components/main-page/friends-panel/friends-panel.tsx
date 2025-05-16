@@ -1,8 +1,11 @@
-import { Avatar, Badge, Grid, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
-import { GrayTypography } from "../../../common/TypographyStyles";
-import FriendBubble from "./friend-bubble";
-import "./styles/friends-panel.css";
+import { Grid, Typography } from '@mui/material';
+import { GrayTypography } from '../../../common/TypographyStyles';
+import FriendBubble from './friend-bubble';
+import './styles/friends-panel.css';
+
+const getFriendCountByRole = (friends: Friend[], role: string): number => {
+  return friends.filter((friend) => friend.role === role).length;
+};
 
 const FriendsPanel: React.FC<FriendsPanelProps> = ({
   friends,
@@ -12,7 +15,7 @@ const FriendsPanel: React.FC<FriendsPanelProps> = ({
   return (
     <Grid
       item
-      sx={{ width: "238px", height: "100%", backgroundColor: "#2f3136" }}
+      sx={{ width: '238px', height: '100%', backgroundColor: '#2f3136' }}
     >
       <Grid container direction="column" className="OuterFriendGrid">
         {roles.map((role) => (
@@ -21,7 +24,9 @@ const FriendsPanel: React.FC<FriendsPanelProps> = ({
               <GrayTypography
                 fontWeight="bold"
                 fontSize="small"
-              >{`${role.toUpperCase()} - 0`}</GrayTypography>
+              >{`${role.toUpperCase()} - ${
+                getFriendCountByRole(friends, role) ?? 0
+              }`}</GrayTypography>
             </Grid>
             {friends
               .filter((friend) => friend.role === role)
